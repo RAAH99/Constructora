@@ -1,0 +1,95 @@
+CREATE DATABASE inventario;
+USE inventario;
+CREATE TABLE `inventario`. `Roles`(
+`Id_Roles` INT (20) NOT NULL AUTO_INCREMENT,
+`Tipo_Rol` VARCHAR (20) NOT NULL,
+PRIMARY KEY (`Id_Roles`));
+
+CREATE TABLE `inventario`.`Operador`(
+`Id_Operador` INT (20) NOT NULL,
+`Id_Solicitud` INT (20) NOT NULL,
+`Id_Herramienta` INT (20) NOT NULL,
+`Id_Roles` INT (20) NOT NULL,
+`Id_Usuario` INT (20) NOT NULL,
+`Nombre` VARCHAR(45) NOT NULL,
+`Apellido` VARCHAR(45) NOT NULL,
+`Fecha_Nac` DATE NOT NULL,
+PRIMARY KEY (Id_Operador));  
+
+CREATE TABLE `inventario`.`Detalle_Solicitud`(
+`Id_Detalle` INT (20) NOT NULL,
+`Id_Solicitud` INT (20) NOT NULL,
+`Nombre_Herramientas` VARCHAR(45) NOT NULL,
+`Cantidad` INT NOT NULL,
+`Estado` VARCHAR(45) NOT NULL,
+PRIMARY KEY (`Id_Detalle`));
+
+
+CREATE TABLE `inventario`.`Solicitud_Herramientas`(
+`Id_Solicitud` INT (20) NOT NULL,
+`Id_Trabajador` INT (20) NOT NULL,
+`Id_Detalle` INT (20) NOT NULL,
+`Hora` TIME NOT NULL,
+`Nombre_Trabajador` VARCHAR(45) NOT NULL,
+`Apellido_Trabajador` VARCHAR(45) NOT NULL,
+`Fecha_Solicitud` DATE NOT NULL,
+PRIMARY KEY (`Id_Solicitud`));
+
+
+CREATE TABLE `inventario`.`Herramientas`(
+`Id_Herramienta` INT (20) NOT NULL AUTO_INCREMENT ,
+`Id_Tipo` INT (20) NOT NULL,
+`Nombre_Herramientas` VARCHAR(45) NOT NULL,
+`Marca` VARCHAR(45) NOT NULL,
+`Modelo` VARCHAR(45) NOT NULL,
+`Estado` VARCHAR(45) NOT NULL,
+`Cantidad` INT (20) NOT NULL,
+`Disponibilidad` VARCHAR(45) NOT NULL,
+PRIMARY KEY (`Id_Herramienta`));
+
+
+CREATE TABLE `inventario`.`Categoria`(
+`Id_Tipo` INT (20) NOT NULL,
+`Tipo` VARCHAR(45) NOT NULL,
+PRIMARY KEY (`Id_Tipo`)); 
+
+
+CREATE TABLE `inventario`.`Registro_Prestamo`(
+`Id_Prestamo` INT (20) NOT NULL,
+`Id_Solicitud` INT (20) NOT NULL,
+`Hora_Entrega` TIME NOT NULL,
+`Fecha_Entrega` DATE NOT NULL,
+`Total_Herramientas` INT NOT NULL,
+`o_Prestamo` VARCHAR(45) NOT NULL,
+`Fecha_Prestamo` DATE NOT NULL,
+`Hora_prestamo` TIME NOT NULL,
+PRIMARY KEY (`Id_Prestamo`));
+
+CREATE TABLE `inventario`.`Trabajador`(
+`Id_Trabajador` INT (20) NOT NULL,
+`Nombre_Trabajador` VARCHAR(45) NOT NULL,
+`Apellido_Trabajador` VARCHAR(45) NOT NULL,
+`Fecha_NacTrab` DATE NOT NULL,
+`Sexo` VARCHAR(45) NOT NULL,
+PRIMARY KEY (`Id_Trabajador`));
+
+CREATE TABLE `inventario`.`Usuario`(
+`Id_Usuario` INT (20) NOT NULL AUTO_INCREMENT,
+`Usuario` VARCHAR(45) NOT NULL,
+`Pasword` VARCHAR(45) NOT NULL,
+`Privilegios` VARCHAR(45) NOT NULL,
+PRIMARY KEY (`Id_Usuario`)); 
+
+ALTER TABLE `Operador` ADD FOREIGN KEY(`Id_Herramienta`) REFERENCES `Herramientas`(`Id_Herramienta`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Operador` ADD FOREIGN KEY(`Id_Solicitud`) REFERENCES `Solicitud_Herramientas`(`Id_Solicitud`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Operador` ADD FOREIGN KEY(`Id_Roles`) REFERENCES `Roles`(`Id_Roles`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Solicitud_Herramientas` ADD FOREIGN KEY(`Id_Trabajador`) REFERENCES `Trabajador`(`Id_Trabajador`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Registro_Prestamo` ADD FOREIGN KEY(`Id_Solicitud`) REFERENCES `Solicitud_Herramientas`(`Id_Solicitud`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Detalle_Solicitud` ADD FOREIGN KEY(`Id_Solicitud`) REFERENCES `Solicitud_Herramientas` (`Id_Solicitud`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Herramientas` ADD FOREIGN KEY(`Id_Tipo`) REFERENCES `Categoria`(`Id_Tipo`)ON UPDATE CASCADE ON DELETE CASCADE;
+ALTER TABLE `Operador` ADD FOREIGN KEY(`Id_Usuario`) REFERENCES `Usuario`(`Id_Usuario`)ON UPDATE CASCADE ON DELETE CASCADE;
+INSERT roles VALUE ("","Administrador");
+INSERT roles VALUE ("","Empleado");
+INSERT Usuario VALUE ("","Administrador","1234","Administrador");
+
+INSERT Usuario VALUE ("","Empleado","12345","Empleado");
