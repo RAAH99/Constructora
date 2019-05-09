@@ -1,0 +1,60 @@
+#contenedor{
+	margin:0 auto;
+	background-color: #283fd7;
+	border:2.5px solid #ff0000;
+}
+#cabesera2{
+	background-color: #7F8C8D;
+	height:60px;
+
+}
+
+#izquierda{
+	height:492px;
+	background-color: #85D305;
+	
+	
+}
+
+#pie{
+	height:66px;      	
+	background-color: #7F8C8D;
+	clear: both;
+}
+
+a:hover, .dropdown:hover  .dropbtn {
+
+	color: white;
+	font-size: 22px;
+	font-family:  Trebuchet MS;
+	border-radius:22px;
+	  color:#2d8eff;
+	   background-color: white;
+ padding: 8px 8px;
+ float: left;
+position:  absolute;
+display: inline-block;
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 70px;
+}
+/*estilo de los elementos de la lista ordenada*/
+li {
+  float: left;/*desplazar los elementos a la derecha*/
+}
+/*Estilo del boton desplegable*/
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 20px 22px;
+  text-decoration: none;
+
+}
+

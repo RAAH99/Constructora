@@ -1,0 +1,17 @@
+.fondo{
+ background-image: url("../imagenes/simple-gradient-blue-1035.jpg");
+ background-repeat: repeat;
+  background-size: cover; 
+ 
+}
+ .log{
+ 
+  position: relative;
+  top: 150px;
+  width: 200px;
+ }
+ .icon{
+ 	position: relative;
+ 	width: 150px;
+	 left: 20px;
+ }

@@ -1,0 +1,89 @@
+.Cabecera{
+	background-color:  #108ABD;
+	height: 10px;
+}
+ .logo{
+ 	border-radius: 50%;
+ 	width: 100px;
+ 	height: 60px;
+ 	margin-right: 10px;
+ 	 -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+
+ }
+ .logo:hover{
+
+ 	transform:scale(1.1,1.1);
+ }
+
+ .opciones{
+ 	border-radius: 50%;
+ 	width: 70px;
+ 	height: 70px;
+ 	margin: 20px;
+ 	margin-left: 40px;
+  display: block;
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+ }
+ .opciones:hover{
+ 	 transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+ }
+ .opciones2{
+ 	border-radius: 30%;
+ 	width: 70px;
+ 	height: 70px;
+ 	margin: 20px;
+ 	margin-left: 40px;
+ 	 display: block;
+  transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+ }
+ .opciones2:hover{
+ 	 transform: scale(1);
+  -ms-transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+ }
+ .texto{
+
+color: #FFFFFF;
+font-family: sans-serif;
+font-weight: bold;
+ }
+ body{
+ 	background-color: #242020;
+ }
+ .contenido{	
+ 	color: #FFFFFF;
+ }
+ .contenedor{
+ 	
+ 	height: auto;
+ }
+ footer { 
+ 	
+ color: #FFFFFF;
+
+}

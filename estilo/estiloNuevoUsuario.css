@@ -1,0 +1,83 @@
+.contenedor{
+    float: none;
+    margin: 0 auto;
+    width: 300px;
+	padding-left: 20px;
+	padding-top: 12%;
+	
+}
+#cabesera{
+	background-color: #3a9f24;
+	height: 20%;
+}
+#menu{
+	height: 10%;
+	background-color: #c8cacc;
+}
+#j{height: 50%;
+	background-color: #df8b52;
+	float: right;
+	width: 50%;
+}
+
+#pie{
+	height: 20%;      	
+	background-color: #df5371;
+	clear: both;
+}
+.logo{
+		border-radius: 50%;
+ 	width: 100px;
+ 	height: 60px;
+ 	margin-right: 10px;
+ 	 -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+.logo:hover{
+
+ 	transform:scale(1.1,1.1);
+ }
+ .contenedorform{
+  	font-size: 18px;
+  	color: white; 
+  	height: 500px;
+  	padding-top:  150px;
+  	padding-left: 200px;
+ }
+ .contenedorform2{
+  	font-size: 18px;
+    color: white; 
+    height: 500px;
+  	padding-top:  130px;
+  	padding-left:  350px;
+
+ }
+ .entradas{
+	width:  250px;
+	height: 40px;
+
+ }
+  .entradas2{
+	width:  250px;
+	height: 30px;
+
+ }
+ .glic{
+ 	width:  50px;
+	height: 30px;
+ }
+ body{
+ 	background-image: url("../imagenes/nuevous.jpg");
+ }
+ .texto{
+font-size: 24px;
+text-align: justify;
+color: #D65617;
+ }
+ .texto2{
+ 	font-size: 14px;
+ 	font-weight: bold;
+ 	color: #D65617;
+ }

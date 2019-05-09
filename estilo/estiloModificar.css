@@ -1,0 +1,57 @@
+
+#contenedor{
+	margin:0 auto;
+	background-color: #283fd7;
+	border:2px solid #ff0000;
+}
+#cabesera{
+	background-color: #3a9f24;
+	height: 20%;
+}
+.menu{
+	height: 10%;
+	background-color: #c8cacc;
+}
+#j{height: 50%;
+	background-color: #df8b52;
+	float: right;
+	width: 50%;
+}
+
+.pie{
+	height: 20%;      	
+	background-color: transparent;
+	clear: both;
+	padding-top: 20px;
+}
+.logo{
+		border-radius: 50%;
+ 	width: 100px;
+ 	height: 60px;
+ 	margin-right: 10px;
+ 	 -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+.logo:hover{
+
+ 	transform:scale(1.1,1.1);
+ }
+.contenedorform{
+	position: relative;
+	border-radius: 20px;
+  	font-size: 18px;
+  	color: black; 
+  	padding-top:  30px;
+  	padding-left: 20px;
+  	width: 300px;
+  	background-color: #636161;
+ }
+ .entradas{
+	width:  250px;
+	height: 40px;
+}
+body{
+	background-image: url("../imagenes/herramientas.jpg");
+}

@@ -1,0 +1,18 @@
+div#login{
+	box-shadow: 0 0 5px 5px;
+	position: relative;
+	top: 18px;/* la posicion de arriba o habajo*/
+	left: 10px;/* la posicion del div*/
+	color: #9006C8;/* en esta linea le ponemos el color del borde dentro del div*/
+	font-family: Trebuchet MS;
+	font-size:21px;/*afecta el tamaño de los div*/
+	padding: 20px;/* afeta la pocicion de las los div de crear*/
+	margin: auto;
+	width: 475px;/* ancho del div de dontre esta las opciones de crear*/
+	height: 458px;/*largo del div de dontre esta las opciones de crear*/
+	background-color: #08D7BB;/* en esta linea le ponemos el color de fondo dentro del div*/
+	border-radius: 40px;/* los bordes de donde estan las opciones de imiciarseccion*/
+
+
+
+}
